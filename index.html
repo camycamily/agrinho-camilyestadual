@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exemplo com JavaScript</title>
+</head>
+<body>
+    <h6>Deixe seu comentário:</h6>
+<textarea id="comentarioTexto"placeholder="Escreva aqui..."></textarea>
+<br>
+<button
+    onclick="adicionarComentario()">Enviar
+</button>
+
+<div id="comentariosContainer">
+</div>
+<!-- Comentários aparecem aqui-->
+ <script>
+    function adicionarComentario()
+    {
+        const texto = 
+        document.getElementById("comentarioTexto").value;
+
+        if (texto.trim() === "") {
+            alert("Escreva algo!");
+            return;
+        }
+        const novo =
+        document.createElement("div");
+        novo.className = 
+        "comentario";
+        novo.textContent = texto;
+
+        document.getElementById("comrentariosContainer").appendChild(novo);
+
+        document.getElementById("comentarioTexto").value = "";
+    }
+ </script>
+ <!--HTML-->
+ <script src="script.js"></script>
+</body>
+    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Agrinho</title>
+</head>
+
+<body>
+    <header class="container text-center">
+        <img src="img/aquecimentoglobal.png" alt="imagem a terra com o aumento do aquecimento global" class="rounded-rectangle" width="700" height="415"
+            srcset="">
+        <h1>O Aquecimento Global</h1>
+        <p>As emissões de gases de efeito estufa encobrem a terra e retém o calor do sol. Isso leva ao aquecimento global e à mudança climática. O mundo agora está aquecendo mais rápido do que em qualquer outro momento registrado da história.</p>
+        <p>Com o passar do tempo, temperaturas mais quentes estão mudando os padrões do clima e prejudicando o equilíbrio usual da natureza. Isso apresenta riscos para os seres humanos e outras formas de vida no planeta.</p>
+        <p>À medida que o planeta aquece, fenômenos extremos como secas prolongadas, ondas de calor, enchentes e furacões tornam-se mais frequentes e intensos. As geleiras estão derretendo, o nível dos oceanos está subindo e ecossistemas inteiros estão sob ameaça.</p>
+    </header>
+    <main class="container mt-5">
+        <h2>Matérias</h2>
+        <div class="row">
+            <!-- Projeto 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/gerandoenergia.jpg" class="card-img-top" alt=" imagem poluição por meio da induústria">
+                    <div class="card-body">
+                        <h5 class="card-title">Gerando energia</h5>
+                        <p class="card-text">A geração de energia elétrica e de calor através da queima de combustíveis fósseis como carvão, petróleo e gás natural é responsável por grande parcela das emissões globais. A maior parte da eletricidade ainda é produzida por combustíveis fósseis, somente um quarto vem de vento, sol e outras fontes renováveis.
+                        </p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal1">
+                            Ler mais</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Projeto 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/alagamentos.jpg" class="card-img-top" alt=" imagem alagamentos">
+                    <div class="card-body">
+                        <h5 class="card-title">Mudanças climáticas</h5>
+                        <p class="card-text">Mudanças na temperatura causam alterações nas chuvas. Isso resulta em tempestades mais severas e frequentes. Elas causam alagamentos e deslizamentos de terra, destruindo casas e comunidades.</p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal2">
+                            Ler mais</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projeto 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="img/capitalismo.jpg" class="card-img-top" alt="Imagem do capitalismo">
+                    <div class="card-body">
+                        <h5 class="card-title">Capitalismo
+                        </h5>
+                        <p class="card-text">O Capitalismo pode ser considerado a principal causa do aquecimento global e, efetivamente, da crise climática, reduzindo a expectativa de vida de muitas espécies na Terra. Pois infelizmente a ganância ultrapassou o bom senso e acabará com a vida na Terra.
+                        </p>
+                        <button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modal3">
+                            Ler mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal 1 -->
+    <div class="modal" id="modal1" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Carros Elétricos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>A emissão de gases de efeito estufa por meio da queima dos combustíveis fósseis é realmente um agravante para o aumento do Aquecimento Global. O dióxido de carbono é um dos principais gases que intensificam o efeito estufa e provoca alterações climáticas. A questão da redução das emissões tem sido alvo de discussões de inúmeras conferências ambientais. Diversos acordos já foram estabelecidos, como o Protocolo de Kyoto e o Acordo de Paris. Buscar alternativas à substituição dos combustíveis fósseis para produção de energia é essencial para conservação do meio ambiente e para conter as alterações no clima.
+                        Uma alternativa que está caminhando para isso, são os chamados carros elétricos. Por não terem escapamento, então não emitem dióxido de carbono (CO₂) ou outros poluentes durante o uso. Além dos gases de efeito estufa, carros a combustão emitem poluentes locais (como monóxido de carbono e material particulado) que agravam o aquecimento global indiretamente, ao danificar florestas e ecossistemas que capturam carbono.
+</p>
+                    <img src="img/carros eletricos.jpg" class="img-fluid w-100"
+                        alt="Imagem representativa da poluição dos carros">
+                </div>
+                <div class="modal-footer">
+                    <a href="https://youtu.be/hdkhYyUxr3o">Assista</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2 -->
+    <div class="modal" id="modal2" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">As Enchentes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>As mudanças climáticas aumentaram em duas vezes a probabilidade de ocorrência das chuvas históricas que causaram enchentes devastadoras no Rio Grande do Sul entre o final de abril e início de maio. Ao ser apontado por estudos que as enchentes no RS eram derivadas das intensas mudanças climáticas provocadas pela ação humana, em especial a emissão de gases do efeito estufa lilberados com a queima de combustíveis fósseis e as Indútrias. Tornaram as chuvas no Rio Grande do Sul mais intensas, o que não é nem de longe normal. Se continuarmos queimando combustíveis fósseis e as indústrias continuarem a todo vapor, as temperaturas subirão 2°C em relação aos níveis pré-industriais, o que pode ocorrer em 20-30 anos se não pararmos rapidamente as emissões, eventos de chuvas intensas serão a nossa menor preocupasão entre as diferentes e piores catástrofes que estão previdas.
+                    </p>
+                    <img src="img/enchentes2.png" class="img-fluid w-100"
+                        alt="Imagem representativa das enchentes do RS">
+                </div>
+                <div class="modal-footer">
+                    <a href="https://youtu.be/tE8feGeo2dE?si=UPARtg5LsA5XgLgn">Assista</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal" id="modal3" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Ebulição Global</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>O capitalismo prospera há séculos mediante a exploração da natureza, tanto como fonte inesgotável de recursos para serem convertidos em mercadorias, quanto como depósito de resíduos. Porém, a capacidade da Terra de suportar os processos ecodestrutivos do capital está chegando ao limite. A necessidade de crescimento constante do capital, da ganância, levou à interrupção de um complexo ciclo natural que levou milhões de anos para se desenvolver, provocando uma fratura entre a sociedade e a natureza. Esse ciclo incessante pracisa acabar, mudar, evoluir, para que possamos continuar a viver. Pois já não chamamos mais de Aquecimento Global, mas sim Ebulição.
+                    </p>
+                    <img src="img/ebulição.jpg" alt="a ebulição global" class="img-fluid w-100">
+                </div>
+                <div class="modal-footer">
+                    <a href="https://youtu.be/dOvliQTEQxw?si=qA8wA5Wao7io9k-F">Assista</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container py-5">
+        <div>
+            <i class="bi bi-github"></i>
+            <a href="https://github.com/camycamily/agrinho-camilyestadual">GitHub</a>
+        </div>
+        <p class="my-5 text-center">© Copyright 2024. Produzido por Camily Vitória G Freitas</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
